@@ -1,0 +1,20 @@
+.input_box {
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 6px #e4e4e4, inset -3px -3px 6px #ffffff;
+}
+
+.input_box::-webkit-outer-spin-button,
+.input_box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_box[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input_box:focus {
+  outline: none;
+}

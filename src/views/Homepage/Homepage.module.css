@@ -1,0 +1,15 @@
+.container {
+  /* display: flex; */
+  background-image: url("/assets/images/homepage/background.jpg");
+  object-fit: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.description_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

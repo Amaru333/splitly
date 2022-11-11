@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-family: "Raleway";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(48, 29, 0) 100%);
+  /* align-items: center; */
+  font-size: 14px;
+  color: #8f8f8f;
+  position: sticky;
+  top: 0;
+}
+
+.menu_active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu_inactive {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10%;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu_active:hover,
+.menu_inactive:hover {
+  background-color: rgba(239, 151, 26, 0.1);
+}
+
+.logo {
+  font-family: "Comfortaa", cursive;
+  font-size: 3rem;
+  color: white;
+  cursor: default;
+}
+
+.dot {
+  color: #ef971a;
+  font-weight: 700;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 3px;
+  margin-left: 3px;
+}

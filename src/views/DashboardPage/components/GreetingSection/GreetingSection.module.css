@@ -1,0 +1,13 @@
+.container {
+  margin-top: 0.5rem;
+}
+
+.headings {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.name {
+  color: #ef971a;
+  font-weight: 600;
+}
