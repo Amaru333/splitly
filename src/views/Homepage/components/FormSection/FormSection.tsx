@@ -211,14 +211,14 @@ function FormSection() {
             <UILottiePlayer animation={MailSent} />
           </div>
           <div>
-            <p className={FormSectionStyles.modal_title}>We've sent you a verification mail</p>
+            <p className={FormSectionStyles.modal_title}>We&apos;ve sent you a verification mail</p>
             <p className="text-center mt-4 px-4">
               Please check your mail account <span className="font-medium">{resData.email}</span> and click the link sent to verify your email ID. The link will be valid for 30 minutes.
             </p>
             <p className="text-gray-500 text-xs text-center mt-4">
               {!clickedResendVerification ? (
                 <>
-                  Didn't receive the mail?{" "}
+                  Didn&apos;t receive the mail?{" "}
                   <span className="cursor-pointer underline" onClick={() => onResend(resData._id, resData.email)}>
                     Click here to resend
                   </span>

@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserDetails, logUser } from "../../../redux/user/user";
 import DashboardLayout from "../DashboardLayout/DashboardLayout";
 
-function AppLayout({ children }: AppLayoutProps) {
+function AppLayout({ children }: AppLayoutProps): JSX.Element {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -33,7 +33,7 @@ function AppLayout({ children }: AppLayoutProps) {
         });
     }
   }
-  if (router.pathname == "/verify/[id]") return children;
+  if (router.pathname == "/verify/[id]") return <>{children}</>;
   if (router.pathname == "/") return <NonLoggedRoute>{children}</NonLoggedRoute>;
   return (
     <AuthGuard>

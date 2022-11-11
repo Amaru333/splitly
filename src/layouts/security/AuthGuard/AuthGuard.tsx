@@ -68,7 +68,7 @@ function AuthGuard({ children }: AuthGuardProps) {
             <p className="text-gray-500 text-xs text-center mt-4">
               {!clickedResendVerification ? (
                 <>
-                  Didn't receive the mail?{" "}
+                  Didn&apos;t receive the mail?{" "}
                   <span className="cursor-pointer underline" onClick={() => onResend(userDetails._id, userDetails.email)}>
                     Click here to resend
                   </span>
