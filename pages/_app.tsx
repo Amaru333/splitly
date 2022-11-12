@@ -11,9 +11,6 @@ import { Analytics } from "@vercel/analytics/react";
 import AppLayout from "../src/layouts/PageLayouts/AppLayout/AppLayout";
 
 export default function App({ Component, pageProps }: AppProps) {
-  // const initialLoad = getLocalStorageItems();
-  // console.log(initialLoad, "initialLoad");
-
   return (
     <Provider store={store}>
       <AppLayout>
