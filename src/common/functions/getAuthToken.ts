@@ -3,6 +3,7 @@ export const getAuthToken = (): object => {
   console.log(token, "Token");
   const headers = {
     "auth-token": token.token,
+    "X-Requested-With": "XMLHttpRequest",
   };
   return headers;
 };
