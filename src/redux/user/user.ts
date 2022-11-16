@@ -9,6 +9,7 @@ const initialState = {
     email: "",
     name: "",
     username: "",
+    monthly_limit: 0,
     verified: false,
   },
 };
@@ -23,6 +24,9 @@ export const userSlice = createSlice({
     logoutUser: (state) => {
       state.data = initialState.data;
     },
+    changeMonthlyLimit: (state, value) => {
+      state.data.monthly_limit = value.payload;
+    },
   },
 });
 
@@ -36,6 +40,11 @@ export const getUserDetails = createSelector(
 export const getUserVerificationStatus = createSelector(
   (state: any) => state.user,
   (user) => user.data.verified
+);
+
+export const getMonthlyLimit = createSelector(
+  (state: any) => state.user,
+  (user) => user.data.monthly_limit
 );
 
 export default userSlice.reducer;

@@ -4,7 +4,6 @@ import { InputInterface } from "./InputInterface";
 import UIInputStyles from "./UIInput.module.css";
 
 function UIInput({ label, placeholder, defaultValue, type = "text", value, setValue, warning, ...rest }: InputInterface) {
-  console.log(warning);
   return (
     <div className="mb-4">
       <div className="flex flex-row items-center mb-2">

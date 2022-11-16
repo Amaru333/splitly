@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Headings from "../../common/components/headings/Headings";
 import { TEXT_DASHBOARD_TITLE } from "../../common/constants/stringConstants";
@@ -9,8 +9,20 @@ import GraphSection from "./components/GraphSection/GraphSection";
 import GreetingSection from "./components/GreetingSection/GreetingSection";
 import LimitSection from "./components/LimitSection/LimitSection";
 import RecentTransactions from "./components/RecentTransactions/RecentTransactions";
+import { getLifetimeSpent, getMonthlySpent } from "./functions";
 
 function DashboardPage() {
+  const [monthlySpent, setMonthlySpent] = useState<number>(0);
+  const [lifetimeSpent, setLifetimeSpent] = useState<number>(0);
+
+  useEffect(() => {
+    getMonthlySpent().then((res) => {
+      setMonthlySpent(res.data[0].amount_spent);
+    });
+    getLifetimeSpent().then((res) => {
+      setLifetimeSpent(res.data[0].total);
+    });
+  }, []);
   return (
     <div>
       <Head>
@@ -20,7 +32,7 @@ function DashboardPage() {
         <Headings>Dashboard</Headings>
         <div className="grid grid-cols-3">
           <div className="col-span-1 flex flex-col justify-center">
-            <GreetingSection />
+            <GreetingSection monthlySpent={monthlySpent} lifetimeSpent={lifetimeSpent} />
           </div>
           <div className="col-span-2 mx-12 my-8">
             <div>
@@ -28,7 +40,7 @@ function DashboardPage() {
             </div>
           </div>
           <div className="col-span-1 my-12 py-12">
-            <LimitSection />
+            <LimitSection monthlySpent={monthlySpent} />
           </div>
           <div className="col-span-1 my-12 py-12 px-8">
             <ActiveSessions />

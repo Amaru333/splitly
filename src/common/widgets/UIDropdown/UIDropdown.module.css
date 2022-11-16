@@ -1,0 +1,17 @@
+.select_container {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 6px #e4e4e4, inset -3px -3px 6px #ffffff;
+}
+/* 
+.select_container option:checked {
+  background-color: #ef971a;
+  color: white;
+} */
+
+.select_container option:hover {
+  background-color: #ef971a;
+}

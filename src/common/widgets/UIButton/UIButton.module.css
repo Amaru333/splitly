@@ -18,11 +18,13 @@
   border: 1px solid rgba(1, 20, 46, 1);
 }
 
-.primary:hover {
+.primary:hover,
+.app_primary:hover {
   opacity: 0.9;
 }
 
-.secondary:hover {
+.secondary:hover,
+.app_secondary:hover {
   opacity: 0.7;
 }
 
@@ -31,4 +33,16 @@
   border: none;
   color: gray;
   cursor: default;
+}
+
+.app_primary {
+  background-color: rgb(239, 151, 26);
+  background: linear-gradient(139deg, rgb(239, 151, 26) 0%, rgb(255, 170, 52) 96%);
+  color: white;
+}
+
+.app_secondary {
+  background: white;
+  color: rgb(239, 151, 26);
+  border: 1px solid rgb(239, 151, 26);
 }

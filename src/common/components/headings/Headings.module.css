@@ -1,6 +1,8 @@
 .container {
   border-bottom: 1px solid #58585836;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .title {
@@ -8,4 +10,12 @@
   font-weight: 700;
   font-family: "Raleway";
   padding-bottom: 1rem;
+}
+
+.icon_container {
+  padding-bottom: 1rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

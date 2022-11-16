@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { GraphDataInterface } from "./GraphInterfaces";
+import { getGraphData } from "./functions";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function GraphSection() {
+  const [graphData, setGraphData] = useState<Array<number>>([]);
+  const res_data: Array<number> = Array.from({ length: 12 }, () => 0);
+  useEffect(() => {
+    getGraphData()
+      .then((res) => {
+        let response: Array<GraphDataInterface> = res.data;
+        response.forEach((res) => {
+          res_data[res.month - 1] = res.amount_spent;
+        });
+        setGraphData(res_data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   const black = "#000000d1";
   const orange = "#ef971ad1";
   const options = {
@@ -73,13 +88,14 @@ function GraphSection() {
     datasets: [
       {
         label: "",
-        data: [12, 10, 14, 7, 11, 9, 17, 12, 11, 10, 11, 14],
+        data: graphData,
         backgroundColor: [black, orange, black, orange, black, orange, black, orange, black, orange, black, orange],
       },
     ],
   };
   return (
     <div>
+      <p className="text-3xl font-semibold mb-8 pl-4">Monthly spend trend</p>
       <Bar options={options} data={data} />
     </div>
   );
