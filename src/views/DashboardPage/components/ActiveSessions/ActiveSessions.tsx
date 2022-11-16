@@ -31,8 +31,8 @@ function ActiveSessions() {
         </div>
       ) : (
         <>
-          {recentActivityData.map((data: any) => (
-            <div className="grid grid-cols-5">
+          {recentActivityData.map((data: any, i: any) => (
+            <div className="grid grid-cols-5" key={i}>
               <div className="col-span-3 flex flex-col justify-center">
                 <p className="text-lg font-semibold text-pyel">{data?.title}</p>
                 <p className="text-sm">{data?.description}</p>

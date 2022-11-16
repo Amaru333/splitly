@@ -14,8 +14,8 @@ function ActivityTables() {
   }, []);
   return (
     <div className="w-full">
-      {recentActivityData.map((data: any) => (
-        <div className="grid grid-cols-12 cursor-pointer" onClick={() => router.push(`/activity/session/${data._id}`)}>
+      {recentActivityData.map((data: any, i: any) => (
+        <div className="grid grid-cols-12 cursor-pointer" onClick={() => router.push(`/activity/session/${data._id}`)} key={i}>
           <div className="col-span-8 flex flex-col justify-center">
             <p className="text-lg font-semibold text-pyel">{data?.title}</p>
             <p className="text-sm">{data?.description}</p>
