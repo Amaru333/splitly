@@ -1,5 +1,5 @@
 export const toIndianSystem = (number: number): string => {
-  const num = number.toLocaleString("en-IN", {
+  const num = number?.toLocaleString("en-IN", {
     maximumFractionDigits: 2,
   });
 

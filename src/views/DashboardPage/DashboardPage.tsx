@@ -17,10 +17,10 @@ function DashboardPage() {
 
   useEffect(() => {
     getMonthlySpent().then((res) => {
-      setMonthlySpent(res.data[0].amount_spent);
+      setMonthlySpent(res.data[0]?.amount_spent || 0);
     });
     getLifetimeSpent().then((res) => {
-      setLifetimeSpent(res.data[0].total);
+      setLifetimeSpent(res.data[0]?.total || 0);
     });
   }, []);
   return (
