@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) and Tailwind project.
 
 ## Getting Started
 
@@ -12,11 +12,21 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The `pages/` directory contains the pages present in this application. Folder structure is generic Nextjs structure.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The `public/` directory contains all public entities such as images, icons, favicons, etc used in the application.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Components
+
+The `src/` directory contains all the components, functions, styling, etc.
+
+The `views/` directory under `src/` contains components which are rendered for the users. Each `view` is further divided into components, functions (which contains API calls, functions being used in the components, etc), constants, css file for that particular component, and interface file.
+
+The `common/` directory contains common reusable components, constants, interfaces, widgets, etc.
+
+## Styling
+
+Most of the stylings are done through TailwindCSS, while stylings which require animations are done with module css files.
 
 ## Learn More
 
