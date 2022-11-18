@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) and Tailwind project.
+This is a [Next.js](https://nextjs.org/) and Typescript project.
 
 ## Getting Started
 
